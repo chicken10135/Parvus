@@ -25,6 +25,22 @@ end]]
 --local ReplicatedStorage = game:GetService("ReplicatedStorage")
 --local Tortoiseshell = getupvalue(require(ReplicatedStorage.TS), 2)
 -- // TODO: Get LocalPlayer Character
+PlayerService.ChildAdded:Connect(function(child)
+    if child:IsA("Player") then
+        if child:IsInGroupAsync(5284251) then     
+            print(child.Name)
+            Parvus.Utilities.UI:Push({Title = "Parvus Hub", Description = "Moderator has joined!", Duration = 5})
+        end
+    end
+end)
+for i,v in pairs(PlayerService.GetChildren()) do
+    if v:IsA("Player") then
+        if v:IsInGroupAsync(5284251) then     
+            print(v.Name)
+            Parvus.Utilities.UI:Push({Title = "Parvus Hub", Description = "Moderator is in server!", Duration = 15})
+        end
+    end
+end
 
 local SilentAim, Aimbot, Trigger, AutoshootHitbox = nil, false, false, nil
 local ProjectileSpeed, ProjectileGravity, GravityCorrection = 1600, 150, 2
