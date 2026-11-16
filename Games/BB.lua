@@ -53,7 +53,7 @@ for Index, Connection in pairs(getconnections(Tortoiseshell.Characters.Character
     end
 end
 
-HandleCharacter = getupvalue(HandleCharacter, 6)
+HandleCharacter = getupvalue(HandleCharacter, 5)
 local CharacterHandlers = getupvalue(HandleCharacter, 3)
 --local Events = getupvalue(Tortoiseshell.Network.BindEvent, 1)
 local WeaponConfigs = getupvalue(Tortoiseshell.Items.GetConfig, 3)
