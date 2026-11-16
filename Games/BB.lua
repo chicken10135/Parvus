@@ -540,6 +540,9 @@ do
 
         if Method == "FireServer" then
             --local Args = {...}
+            if type(A) == string then
+                print(A)
+            end
             if type(A) == "string"
             and table.find(BanCommands, A) then
                 print("blocked", B) return
