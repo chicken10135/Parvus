@@ -33,7 +33,7 @@ PlayerService.ChildAdded:Connect(function(child)
         end
     end
 end)
-for i,v in pairs(PlayerService.GetChildren()) do
+for i,v in pairs(PlayerService:GetChildren()) do
     if v:IsA("Player") then
         if v:IsInGroupAsync(5284251) then     
             print(v.Name)
