@@ -33,12 +33,10 @@ PlayerService.ChildAdded:Connect(function(child)
         end
     end
 end)
-for i,v in pairs(PlayerService:GetChildren()) do
-    if v:IsA("Player") then
-        if v:IsInGroupAsync(5284251) then
-            print(v.Name)
-            Parvus.Utilities.UI:Push({Title = "Parvus Hub", Description = "Moderator is in server!", Duration = 15})
-        end
+for _, player in PlayerService:GetPlayers() do
+    if player:IsInGroupAsync(5284251) then
+        print(player.Name)
+        Parvus.Utilities.UI:Push({Title = "Parvus Hub", Description = "Moderator is in server!", Duration = 15})
     end
 end
 
